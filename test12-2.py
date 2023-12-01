@@ -277,3 +277,15 @@ plt.show() """
 
 #선 스타일 설정 
 plt.plot([2,3,6,7,10], [1,4,5,8,9], "-", label="PData(km)")
+plt.plot([2,3,6,7,10], [1,4,5,8,9], "--", label="PData(km)")
+plt.plot([2,3,6,7,10], [1,4,5,8,9], ":", label="PData(km)")
+plt.plot([2,3,6,7,10], [1,4,5,8,9], ",", label="PData(km)")
+plt.plot([2,3,6,7,10], [1,4,5,8,9], ".", label="PData(km)")
+plt.plot([2,3,6,7,10], [1,4,5,8,9], "-.", label="PData(km)")
+plt.plot([2,3,6,7,10], [1,4,5,8,9], ".-", label="PData(km)")
+plt.plot([2,3,6,7,10], [1,4,5,8,9], ".--", label="PData(km)")
+
+plt.plot([2,3,6,7,10], [1,4,5,8,9], linestyle="solid", label="PData(km)")
+plt.plot([2,3,6,7,10], [1,4,5,8,9], linestyle="dashed", label="PData(km)")
+plt.plot([2,3,6,7,10], [1,4,5,8,9], linestyle="dashdot", label="PData(km)")
+plt.plot([2,3,6,7,10], [1,4,5,8,9], linestyle="dotted", label="PData(km)") """
