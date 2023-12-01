@@ -115,3 +115,26 @@ print(res)
 print("\n------------------------\n")
 print(df2)
 
+res = pd.isna(df1)
+res = pd.isna(df)
+res = pd.isna(df0)
+res = pd.isna(df2)
+print(res)
+
+res = df.["연도"].vlaue_counts()
+res = df["지역명"].vlaue_counts()
+res = df["월"].vlaue_counts()
+res = df.월.vlaue_counts()
+print(res)
+ """
+ #그루핑
+""" res = df.groupby(["지역명", "연도", "월"]).sum()
+res = df.groupby(["지역명", "연도", "월"]).all()
+print(res)
+
+df.groupby(["지역명", "연도", "월"])["분양가"].agg("sum")
+print(res)
+
+print("\n------------------------\n")
+print(df.mean()) """
+
