@@ -87,3 +87,59 @@ plt.grid(axis="y", color="g", alpha=0.5, linestyle="-")
 plt.grid(axis="x", color="r", alpha=0.3, linestyle="-")
 plt.grid(axis="y", color="g", alpha=0.5, linestyle="-.")
 
+#눈금표시 
+plt.xticks()
+plt.yticks()
+
+plt.xticks([0,1,2,3,4,5,6,7,8,9,10])
+plt.yticks([0,1,2,3,4,5,6,7,8,9,10])
+
+plt.xticks([1,3,5,7,9,11])
+plt.yticks([2,4,6,8,10])
+#라벨 지정
+plt.xticks([1,2,3,4,5,6,7,8,9,10], labels=["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"])
+plt.yticks([0,1,2,3,4,5,6,7,8,9,10,11], labels=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])
+#눈금 안쪽 / 바깥쪽 
+plt.tick_params(axis="x", direction="in")
+#plt.tick_params(axis="x", direction="out")
+plt.tick_params(axis="y", direction="in")
+
+plt.show() """
+
+#막대그래프
+x_years = ['2020', '2021', '2022']
+y_data = [100, 400, 900]
+clr = ["C2", "lime", "#57ADCC"]
+
+plt.bar(x_years, y_data)
+#색지정 
+plt.bar(x_years, y_data, color="g")
+plt.bar(x_years, y_data, color="C7")
+plt.bar(x_years, y_data, color="#57ADCC")
+#개별 색 지정
+plt.bar(x_years, y_data, color=clr)
+#너비
+plt.bar(x_years, y_data, color=clr, align="edge", width=2)
+plt.bar(x_years, y_data, color=clr, align="edge", width=0.5)
+plt.bar(x_years, y_data, color=clr, align="edge", width=0.1)
+#막대 위치 선정 
+plt.bar(x_years, y_data, color=clr, align="edge", width=0.5)
+plt.bar(x_years, y_data, color=clr, align="center", width=0.5)
+# 라인 색 선택
+plt.bar(x_years, y_data, color=clr, align="center", edgecolor="black", width=0.5)
+plt.bar(x_years, y_data, color=clr, align="center", edgecolor="C2", width=0.5)
+# 테두리 라인 설정
+plt.bar(x_years, y_data, color=clr, align="center", edgecolor="black", linewidth=3, width=0.5)
+plt.bar(x_years, y_data, color=clr, align="center", edgecolor="black", linewidth=3, width=2)
+#축 지표 설정 
+plt.xticks(x_years)
+plt.yticks(y_data, y_data)
+plt.yticks([100, 200, 300, 400, 500, 600, 900])
+#수평, 가로 그래프
+plt.barh(x_years, y_data)
+#그래프 설정 
+#   {x축 데이터}{y축 데이터}{색설정} {위치설정} {테두리색설정} {선두께} {그래프 두께}
+plt.barh(x_years, y_data, color=clr, align="center", edgecolor="black", linewidth=3, height=0.3)
+
+plt.show()
+
