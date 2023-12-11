@@ -185,4 +185,32 @@ end_date = "2023-12-02"
 
 data = yf.download(ticker, start=start_date, end=end_date)
 
-plt.show()  
+plt.plot(data["Close"], label="Close Price")
+# 50일 평균
+data["MA_50"] = data["Close"].rolling(window=50).mean()
+
+# 200일 평균
+data["MA_200"] = data["Close"].rolling(window=200).mean()
+
+#국가별 인구 데이터 분석
+url = "https://www.worldometers.info/world-population/population-by-country/"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
+
+countries= []
+populations = []
+
+for row in rows:
+    columns = row.select("td")
+    country = columns[1].get_text(strip=True)
+    population = int(columns[2].get_text(strip=True).replace(",", ""))
+    
+    countries.append(country)
+    populations.append(population)
+top_countries = countries:10]
+top_populations =populations[:10]
+
+plt.barh(top_countries[::-1], top_populations[::-1], color="skyblue")
+plt.xlabel("Population")
+plt.title("Top 10")
+plt.show()
