@@ -7,28 +7,41 @@ x2 = [1,4,5,8,9]
 y1 = [1,4,5,8,9]
 y2 = [2,4,6,8,10]
 
-plt.style.use("bmh")
-plt.subplot(2, 1, 1)    # 1set
+#plt.subplot(2, 1, 1)
+#plt.subplot(1, 2, 1)
+#plt.subplot(3, 1, 1)
+plt.subplot(2, 2, 1)
 plt.plot(x1, y1, "o-")
 
-plt.style.use("ggplot")
+plt.title("X1 Graph")
+plt.xlabel("x_data")
+plt.ylabel("y_data")
+
+plt.style.use("bmh")
 plt.subplot(2, 1, 2)
 plt.subplot(1, 2, 2)
 plt.subplot(3, 1, 2)
+plt.subplot(2, 2, 2)
 plt.plot(x2, y2, ".-")
 
-plt.subplot(2, 1, 1)
-plt.subplot(1, 2, 1)
-plt.plot(x2, y2, ".-")
+plt.title("X2 Graph")
+plt.xlabel("x2-data")
+plt.ylabel("y2-label")
 
-plt.subplot(3, 1, 1)
-plt.subplot(3, 1, 2)
-plt.subplot(3, 1, 3)
+plt.style.use("ggplot")
+#plt.subplot(3, 1, 3)
+plt.subplot(2, 2, 3)
 plt.plot(x1, y1, ".-")
 plt.plot(x2, y2, ".-")
 
-plt.subplot(2, 2, 1)
+plt.title("X3 Graph")
+plt.xlabel("x3_data")
+plt.ylabel("y3_data")
+
+plt.style.use("Solarize_Light2")
 plt.subplot(2, 2, 4)
+plt.plot(x1, y2, ".-")
+plt.plot(x2, y1, ".-")
 
 plt.title("x4-Graph")
 plt.xlabel("x4-data")
